@@ -1,0 +1,19 @@
+# Deployment for app3
+
+apiVersion: apps/vi
+kind: Deployment
+metadata:
+  name: app3
+
+# Service for app3
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: app3
+spec:
+  selector:
+    app: app3
+  ports:
+    - protocol: TCP
+      port: 80
